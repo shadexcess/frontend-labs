@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8">
+        <title>Лабораторна робота 2</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="feedback-body">
+        <form action="main.html" class="feedback-form">
+            <fieldset>
+                <legend>Персональна інформація</legend>
+                <div>
+                    <label for="user-name-and-surname">Ім'я та прізвище</label>
+                    <input type="text" id="user-name-and-surname" name="UserNameAndSurname" minlength="1" maxlength="100" size="25" required>
+                </div>
+
+                <div>        
+                    <label for="user-email">Електронна пошта</label>
+                    <input type="email" id="user-email" name="UserEmail" placeholder="example@gmail.com" required>
+                </div>
+
+                <div>
+                    <label for="user-age">Вік</label>
+                    <input type="number" id="user-age" name="UserAge" min="1" required>
+                </div>
+            </fieldset>
+
+            <label for="feedback-purpose">Мета зворотного зв’язку</label>
+            <select id="feedback-purpose" name="FeedbackPurpose">
+                <option value="Cooperation">Співпраця</option>
+                <option value="QualityComplaint">Поскаржитись на якість послуги</option>
+                <option value="Offer">Пропозиція</option>
+                <option value="ErrorOnWebsite">Помилка на сайті</option>
+            </select>
+
+            <label for="detailed">Опишіть детальніше:</label>
+            <textarea id="detailed" name="Details" cols="50" rows="15" maxlength="400"></textarea>
+
+            <div>
+                <input type="checkbox" id="accept-privacy-policy" name="AcceptedPrivacyPolicy" required>
+                <label for="accept-privacy-policy">
+                    Я ознайомлений(а) і погоджуюсь з умовами обробки персональних даних відповідно до 
+                    <a href="privacy-policy.html" target="_blank">Політики конфіденційності</a>
+                </label>
+            </div>
+
+            <button type="submit">Відправити</button>
+        </form>
+    </body>
+</html>
